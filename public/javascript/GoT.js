@@ -41,7 +41,6 @@ for (let i = 0; i < personajesLista.length; i++) {
   const elementoLista = document.createElement("li");
   elementoLista.classList.add("character col");
   card.appendChild(elementoLista);
-  elementoLista.innerHTML = "HOLA";
 
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("card character__card");
@@ -58,6 +57,8 @@ for (let i = 0; i < personajesLista.length; i++) {
   const cardTitle = document.createElement("h2");
   cardTitle.classList.add("character__name card-title h4");
   cardDiv.appendChild(cardBody);
+  const texth2 = personajesLista[i].nombre + "y" + personajesLista.familia;
+  cardTitle.innerHTML = texth2;
 
   const cardInfo = document.createElement("div");
   cardInfo.classList.add("character__info");
