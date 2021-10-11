@@ -17,7 +17,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="src/index.js" type="module"></script>
+    <!--<script src="src/index.js" type="module"></script>-->
+    <script src="index.js"></script>
   </head>
   <body>
     <div class="app container">
@@ -52,6 +53,11 @@
                 </ul>
                 <div class="character__actions">
                   <button class="character__action btn">habla</button>
+                  <button
+                    type="button"
+                    onclick="structure()"
+                    value="AYUDA"
+                  ></button>
                   <button class="character__action btn">muere</button>
                 </div>
               </div>

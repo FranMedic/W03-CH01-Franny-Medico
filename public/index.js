@@ -1,37 +1,4 @@
-import Asesor from "./Asesor.js";
-import Escudero from "./Escudero.js";
-import Luchador from "./Luchador.js";
-import Personajes from "./Personajes.js";
-import Rey from "./Rey.js";
-
-const joffrey = new Rey("Joffrey", Personajes.familia.baratheon, 17, 2);
-const jaime = new Luchador(
-  "Jaime",
-  Personajes.familia.lannister,
-  30,
-  "Sword",
-  7
-);
-const daenerys = new Luchador(
-  "Daenerys",
-  Personajes.familia.targaryen,
-  20,
-  "Dragons",
-  7
-);
-const tyrion = new Asesor("Tyrion", Personajes.familia.lannister, 20, daenerys);
-const bronn = new Escudero(
-  "Bronn",
-  Personajes.familia.aguasnegras,
-  32,
-  jaime,
-  7
-);
-
-const personajesLista = [joffrey, jaime, daenerys, tyrion, bronn];
-console.log(personajes);
-
-for (let i = 0; i < personajesLista.length; i++) {
+function structure() {
   const container = document.querySelector(".app container");
 
   const card = document.createElement("ul");
@@ -126,27 +93,21 @@ for (let i = 0; i < personajesLista.length; i++) {
   comunications.appendChild(comunicationsImage);
 }
 
-/*
-const comunicados = personajesLista
-  .filter((persona) => persona instanceof Luchador)
-  .map((persona) => persona.comunicarse());
+//crear ul
+//crear li
+//crear div card
+//crear img
+//crear div body
+//crear h2
+//crear div info
+//crear lista datos
+//crear li edad
+//li estado
 
-console.log(joffrey.serie);
-comunicados.forEach((mensaje) => console.log(mensaje));
-console.log(`Jaime vivo ? ${jaime.vivo}`);
-console.log(`Tyirion vivo ? ${tyrion.vivo}`);
-jaime.morir();
-tyrion.morir();
-console.log(`Jaime vivo ? ${jaime.vivo}`);
-console.log(`Tyirion vivo ? ${tyrion.vivo}`);
+//crear div
+//crear ul
+// crear li
 
-/*
-let itm = document.getElementsByClassName("character col");
-
-let cln = itm[0].cloneNode(true);
-
-const bloqueFichas = document.getElementsByClassName(
-  "characters-list row list-unstyled"
-);
-bloqueFichas[0].appendChild(cln);
-*/
+//crear div
+//button
+//button
