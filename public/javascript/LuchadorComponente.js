@@ -1,31 +1,33 @@
+import Luchador from "./Luchador.js";
+import Personajes from "./Personajes.js";
+import Component from "./Component.js";
 
+class LuchadorComponente extends Component {
+  nombre;
+  familia;
+  edad;
+  vivo;
+  arma;
+  destreza;
+  image;
+  constructor(nombre, familia, edad, vivo, arma, destreza) {
+    super();
+    this.nombre = nombre;
+    this.familia = familia;
+    this.edad = edad;
+    this.vivo = vivo;
+    this.arma = arma;
+    this.destreza = destreza;
+    this.image = image;
 
-
-class Card extends Component {
-  personaje;
-  constructor(
-    parentElement,
-    { nombre, familia, edad, imagen }
-  ) {
-    super(parentElement, "character col", "li");
-
-    this.personaje = {
-      nombre,
-      familia,
-      edad,
-      vivo,
-      serie,
-      imagen,
-    };
-    this.generateHTML();
+    this.generateHTML(nombre, familia, edad, vivo, arma, destreza, image);
   }
 
-  generateHTML() {
-    const { nombre, familia, edad, imagen };
+  generateHTML(nombre, familia, edad, vivo, arma, destreza, image) {
     const html = `<li class="character col">
           <div class="card character__card">
             <img
-              src="img/${imagen}.jpg"
+              src="img/${image}.jpg"
               alt="${nombre} de la ${familia}"
               class="character__picture card-img-top"
             />
@@ -36,30 +38,24 @@ class Card extends Component {
                   <li>Edad: ${edad} </li>
                   <li>
                     Estado:
-                    ${
-                      vivo
-                    ?<i class="fas fa-thumbs-down"></i>
-                    :<i class="fas fa-thumbs-up"></i>
+                   
+                     
+                        <i class="fas fa-thumbs-down"></i>
+                      
+                        <i class="fas fa-thumbs-up"></i>
+                      
                     }
                   </li>
                 </ul>
               </div>
               <div class="character__overlay">
                 <ul class="list-unstyled">
-                  <li>Años de reinado: X</li>
-                  <li>Arma: XXX</li>
-                  <li>Destreza: X</li>
-                  <li>Peloteo: X</li>
-                  <li>Asesora a: X</li>
-                  <li>Sirve a: X</li>
+                  <li>Arma:${arma}</li>
+                  <li>Destreza: ${destreza}</li>
+
                 </ul>
                 <div class="character__actions">
                   <button class="character__action btn">habla</button>
-                  <button
-                    type="button"
-                    onclick="structure()"
-                    value="AYUDA"
-                  ></button>
                   <button class="character__action btn">muere</button>
                 </div>
               </div>
@@ -67,7 +63,8 @@ class Card extends Component {
             <i class="emoji"></i>
           </div>
         </li>`;
-        this.element.innerHTML=html;
+    this.element.innerHTML = html;
   }
 }
 
+export default LuchadorComponente;
