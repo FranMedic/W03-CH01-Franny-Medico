@@ -10,13 +10,7 @@ module.exports = {
     sourceType: "module",
   },
   parser: "@babel/eslint-parser",
-  babel: {
-    env: {
-      test: {
-        plugins: ["@babel/plugin-transform-modules-commonjs"],
-      },
-    },
-  },
+
   rules: {
     "no-param-reassign": "off",
     "no-plusplus": "off",
@@ -29,3 +23,5 @@ module.exports = {
     "import/extensions": "off",
   },
 };
+
+var a mino me mientas 

@@ -30,16 +30,19 @@
     "eslint-plugin-import": "^2.24.2",
     "jest": "^27.2.5",
     "sass": "^1.42.1"
-
-  }
-
   },
-  "dependencies": {},
-  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module",
     "requireConfigFile": false
   },
-  "babel": {}
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  }
 }

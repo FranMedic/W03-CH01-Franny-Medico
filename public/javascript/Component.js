@@ -13,7 +13,7 @@ class Component {
     this.element.className = className;
     this.parentElement = parentElement;
 
-    this.parentElement.append(this.parentElement);
+    this.parentElement.append(this.element);
   }
 }
 
