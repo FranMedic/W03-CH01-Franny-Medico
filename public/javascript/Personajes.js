@@ -1,7 +1,7 @@
 class Personajes {
   nombre;
   edad;
-  estado = "vivo";
+  vivo = "true";
   serie = "juego de trono";
   frase;
 
