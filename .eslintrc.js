@@ -23,5 +23,3 @@ module.exports = {
     "import/extensions": "off",
   },
 };
-
-var a mino me mientas 

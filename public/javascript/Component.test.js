@@ -7,7 +7,7 @@ describe("When gave a Component constructor", () => {
       const className = "halp";
       const son = "p";
 
-      const elementCreado = new Component(father, className, son);
+      const elementCreado = new Component(father, className);
       const elementNacido = father.querySelector("p.halp");
 
       expect(elementNacido).not.toBeNull();
