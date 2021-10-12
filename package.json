@@ -5,11 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll --collect-coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FranMedic/W03-CH01-Franny-Medico.git"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
@@ -20,11 +23,16 @@
   "homepage": "https://github.com/FranMedic/W03-CH01-Franny-Medico#readme",
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.24.2",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "jest": "^27.2.5",
     "sass": "^1.42.1"
+
+  }
+
   },
   "dependencies": {},
   "parser": "@babel/eslint-parser",

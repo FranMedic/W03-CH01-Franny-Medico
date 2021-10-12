@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["airbnb-base", "prettier"],
   parserOptions: {
@@ -9,7 +10,13 @@ module.exports = {
     sourceType: "module",
   },
   parser: "@babel/eslint-parser",
-  Babel: {},
+  babel: {
+    env: {
+      test: {
+        plugins: ["@babel/plugin-transform-modules-commonjs"],
+      },
+    },
+  },
   rules: {
     "no-param-reassign": "off",
     "no-plusplus": "off",
