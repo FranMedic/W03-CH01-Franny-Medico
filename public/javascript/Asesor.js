@@ -20,4 +20,4 @@ class Asesor extends Personajes {
   }
 }
 
-export default Asesor;
+<module className="exports"></module>= {Asesor};
